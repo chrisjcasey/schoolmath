@@ -23,6 +23,7 @@ gcd <- function(x, y){while(y) {t = y;y = x %% y;x = t};return(x)}
 #' getfactorisingproblem()
 #'
 #' @name getfactorisingproblem
+#' @author Chris Casey
 #' @description Get Problem to Factorise
 #' @return List containing Coefficients, String Representation and Solution
 #' @examples
@@ -89,6 +90,7 @@ getfactorisingproblem <- function()
 #' solvefactorisingproblem(coeffs)
 #'
 #' @name solvefactorisingproblem
+#' @author Chris Casey
 #' @description Solve Factorising Problem
 #' @param coeffs vector of 3 Coefficients
 #' @return List containing  String Representation of Solution
@@ -197,6 +199,7 @@ solvefactorisingproblem <- function(coeffs)
 #' getproblems(n)
 #'
 #' @name getproblems
+#' @author Chris Casey
 #' @description Get list of factorising problems
 #' @param n Number of problems
 #' @return None - printed to screen
