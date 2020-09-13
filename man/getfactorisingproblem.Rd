@@ -16,3 +16,6 @@ Get Problem to Factorise
 x = getfactorisingproblem()
 cat(x[[2]])
 }
+\author{
+Chris Casey
+}

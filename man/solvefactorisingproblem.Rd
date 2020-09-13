@@ -19,3 +19,6 @@ Solve Factorising Problem
 x = solvefactorisingproblem(c(1,2,1))
 cat(x[[1]])
 }
+\author{
+Chris Casey
+}

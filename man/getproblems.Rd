@@ -19,3 +19,6 @@ Get list of factorising problems
 getproblems(10)
 
 }
+\author{
+Chris Casey
+}
