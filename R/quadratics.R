@@ -6,13 +6,26 @@ makequadstring <- function(coeffs)
   C=coeffs[3]
 
   s=""
-  if(A==-1) s = paste0(s, "-")
-  if(abs(A) != 1) s = paste0(A)
-  s = paste0(s,"x\u00B2 ")
-  if (B<0) s = paste0(s, "- ") else if (B>0) s = paste0(s, "+ ")
-  if(B != 0) {if(abs(B)!=1) s = paste0(s, abs(B), "x") else s = paste0(s, "x ")}
-  if (C<0) s = paste0(s, "- ") else s = paste0(s, "+ ")
-  s = paste0(s, abs(C))
+  if(A !=0){
+      if(A==-1) s = paste0(s, "-")
+      if(abs(A) != 1) s = paste0(A)
+      s = paste0(s,"x\u00B2")
+      if(B != 0 || C !=0) s = paste0(s," ")
+  }
+  if(B != 0)
+  {
+    if (B<0 && A==0) s = paste0(s, "-")
+    if (B<0 && A!=0) s = paste0(s, "- ")
+    if (B>0 && A!=0) s = paste0(s, "+ ")
+    if(abs(B)!=1) s = paste0(s, abs(B), "x") else s = paste0(s, "x")
+    if( C !=0) s = paste0(s," ")
+  }
+  if(C !=0) {
+    if (C<0 && A==0 && B==0) s = paste0(s, "-")
+    if (C<0 && (A!=0 || B!=0)) s = paste0(s, "- ")
+    if (C>0 && (A!=0 || B!=0)) s = paste0(s, "+ ")
+    s = paste0(s, abs(C))
+  }
 
   s
 }
